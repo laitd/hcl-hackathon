@@ -38,7 +38,7 @@ public class PositionController {
     return ResponseEntity.ok(response);
   }
 
-  @PostMapping(value = "/portfolios/{customerId}/positions")
+  @PostMapping(value = "/portfolios/{customerId}/trade")
   public ResponseEntity<BaseResponse<TradeResponse>> trade(
       @PathVariable final UUID customerId,
       @RequestBody @Valid TradeRequest tradeRequest) {
